@@ -43,6 +43,7 @@ app.get('/search', async (request, response) => {
   } catch (error) {
     next(error);
   }
+});
 
 const PORT = 8000;
 
