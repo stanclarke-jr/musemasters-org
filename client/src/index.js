@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOMClient from 'react-dom/client';
 import App from './App';
+import './index.css';
+import { YoutubeSearchProvider } from './contexts/YoutubeSearchContext';
 import reportWebVitals from './reportWebVitals';
 
 const container = document.getElementById('root');
@@ -8,7 +10,9 @@ const root = ReactDOMClient.createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <App />
+    <YoutubeSearchProvider>
+      <App />
+    </YoutubeSearchProvider>
   </React.StrictMode>
 );
 

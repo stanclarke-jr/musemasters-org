@@ -15,6 +15,7 @@ export default createGlobalStyle`
 }
 html, body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -24,7 +25,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-img, picture, video, canvas, svg {
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #bfbfbf;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  height: 84px;
+}
+img, picture, video, canvas {
   display: block;
   max-width: 100%;
 }

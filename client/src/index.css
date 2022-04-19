@@ -1,0 +1,10 @@
+.video-js {
+  position: relative;
+  /* width: 100%; */
+  width: 750px;
+  height: auto;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  /* padding-top: 56.25%; */
+}
+
