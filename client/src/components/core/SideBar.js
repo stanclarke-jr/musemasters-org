@@ -17,9 +17,9 @@ const SideBar = ({ showSidebar, setShowSidebar }) => {
         <BlackMenuButton onClick={handleHideSidebar} />
         <Logo />
       </SidebarHeader>
-      <div>
+      <ListContainer>
         <aside>
-          <div>Instrument</div>
+          <BoldTxt>Instrument</BoldTxt>
           <ListWrapper>
             <List>
               <ListItem>
@@ -74,7 +74,8 @@ const SideBar = ({ showSidebar, setShowSidebar }) => {
               </ListItem>
             </List>
           </ListWrapper>
-          <div>Genre</div>
+          <Divider />
+          <BoldTxt>Genre</BoldTxt>
           <ListWrapper>
             <List>
               <ListItem>
@@ -110,11 +111,20 @@ const SideBar = ({ showSidebar, setShowSidebar }) => {
             </List>
           </ListWrapper>
         </aside>
-      </div>
+      </ListContainer>
     </SidebarContainer>
   );
 };
 
+const BoldTxt = styled.div`
+  font-weight: 500;
+  margin: 1rem 0;
+`;
+const Divider = styled.div`
+  height: 1px;
+  background-color: rgb(0 0 0 / 0.1);
+  margin: 1.5rem 0 1.75rem;
+`;
 const SidebarContainer = styled.div`
   position: fixed;
   top: 0;
@@ -154,6 +164,9 @@ const SidebarHeader = styled.div`
     padding-left: 2rem;
   }
 `;
+const ListContainer = styled.div`
+  padding: 1rem 2rem;
+`;
 const ListWrapper = styled.div`
   width: 100%;
   flex-grow: 1;
@@ -175,7 +188,7 @@ const ListItem = styled.div`
   width: 100%;
 
   &:hover {
-    background-color: #ddd;
+    background-color: #f1f1f1;
   }
 `;
 const Link = styled.a`
@@ -184,7 +197,8 @@ const Link = styled.a`
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0.5rem 0;
+  /* padding: 0.5rem 0; */
+  padding: 0.75rem 1rem;
 `;
 
 export default SideBar;

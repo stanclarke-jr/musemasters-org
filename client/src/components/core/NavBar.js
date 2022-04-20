@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import WhiteMenuButton from './WhiteMenuButton';
 import Logo from './Logo';
+import NavRightDropdown from './NavRightDropdown';
 import profilePic from '../../assets/images/profile-pic_crop.jpg';
 
 function NavBar({ currentUser, showSidebar, setShowSidebar }) {
+  const [displayBlock, setDisplayBlock] = useState(false);
+
   const handleShowSidebar = () => {
     setShowSidebar(!showSidebar);
     document.querySelector('main').style.marginLeft = '288px';
@@ -14,6 +18,7 @@ function NavBar({ currentUser, showSidebar, setShowSidebar }) {
   };
 
   console.log(currentUser);
+  console.log(displayBlock);
 
   return (
     <Wrapper>
@@ -34,11 +39,18 @@ function NavBar({ currentUser, showSidebar, setShowSidebar }) {
                 </CreateAcctButton>
               </>
             ) : (
-              /* <NavRightDropdown> */
-              /* <Link> */
-              <Avatar src={profilePic} alt="" />
-              /* </Link> */
-              /* </NavRightDropdown> */
+              <>
+                <Avatar
+                  src={profilePic}
+                  alt=""
+                  onClick={() => setDisplayBlock(!displayBlock)}
+                />
+                <DropdownContainer
+                  style={{ display: displayBlock ? 'block' : 'none' }}
+                >
+                  <NavRightDropdown />
+                </DropdownContainer>
+              </>
             )}
           </NavRightWrapper>
         </Nav>
@@ -113,16 +125,13 @@ const StyledLink = styled(Link)`
   color: #fff;
   text-decoration: none;
 `;
-// const NavRightDropdown = styled.div`
-//   position: relative;
-// `;
-// const Link = styled.a`
-//   display: flex;
-//   align-items: center;
-// `;
+const DropdownContainer = styled.div`
+  position: relative;
+`;
 const Avatar = styled.img`
   border-radius: 50%;
   width: 1.6rem;
+  cursor: pointer;
 `;
 
 export default NavBar;
