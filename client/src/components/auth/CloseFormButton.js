@@ -21,14 +21,16 @@ const CloseButtonWrapper = styled.div`
   justify-content: flex-end;
 `;
 const CloseButton = styled.button`
+  background-color: transparent;
+  border: none;
   border-radius: 0.25rem;
   color: rgb(156 163 175);
   padding: 0.25rem;
   margin: 0.5rem;
+  cursor: pointer;
 
   &:hover {
     color: rgb(17 24 39);
-    background-color: rgb(229 231 235);
     border-color: rgb(0 0 0);
   }
 `;

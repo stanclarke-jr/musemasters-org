@@ -11,9 +11,9 @@ export const YoutubeSearchProvider = ({ children }) => {
   const [saxophoneVideos, setSaxophoneVideos] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  axios.defaults.headers = {
-    'Cache-Control': 'no-cache',
-  };
+  // axios.defaults.headers = {
+  //   'Cache-Control': 'no-cache',
+  // };
 
   const fetchVideos = () => {
     const endpoints = [

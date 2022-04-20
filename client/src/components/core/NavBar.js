@@ -4,7 +4,7 @@ import WhiteMenuButton from './WhiteMenuButton';
 import Logo from './Logo';
 import profilePic from '../../assets/images/profile-pic_crop.jpg';
 
-function NavBar({ showSidebar, setShowSidebar }) {
+function NavBar({ currentUser, showSidebar, setShowSidebar }) {
   const handleShowSidebar = () => {
     setShowSidebar(!showSidebar);
     document.querySelector('main').style.marginLeft = '288px';
@@ -12,6 +12,8 @@ function NavBar({ showSidebar, setShowSidebar }) {
     document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.25)';
     document.body.style.overflow = 'hidden';
   };
+
+  console.log(currentUser);
 
   return (
     <Wrapper>
@@ -22,18 +24,22 @@ function NavBar({ showSidebar, setShowSidebar }) {
             <Logo />
           </NavLeftWrapper>
           <NavRightWrapper>
-            <LoginButton type="button">
-              <StyledLink to="/login">Log In</StyledLink>
-            </LoginButton>
-            <CreateAcctButton>
-              <StyledLink to="/create-account">Create account</StyledLink>
-            </CreateAcctButton>
-
-            {/* <NavRightDropdown>
-              <Link>
-                <Avatar src={profilePic} alt="" />
-              </Link>
-            </NavRightDropdown> */}
+            {!currentUser ? (
+              <>
+                <LoginButton type="button">
+                  <StyledLink to="/login">Log In</StyledLink>
+                </LoginButton>
+                <CreateAcctButton>
+                  <StyledLink to="/create-account">Create account</StyledLink>
+                </CreateAcctButton>
+              </>
+            ) : (
+              /* <NavRightDropdown> */
+              /* <Link> */
+              <Avatar src={profilePic} alt="" />
+              /* </Link> */
+              /* </NavRightDropdown> */
+            )}
           </NavRightWrapper>
         </Nav>
       </NavContainer>
@@ -114,9 +120,9 @@ const StyledLink = styled(Link)`
 //   display: flex;
 //   align-items: center;
 // `;
-// const Avatar = styled.img`
-//   border-radius: 50%;
-//   width: 1.6rem;
-// `;
+const Avatar = styled.img`
+  border-radius: 50%;
+  width: 1.6rem;
+`;
 
 export default NavBar;

@@ -1,6 +1,5 @@
 import { useContext, useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
 import videojs from 'video.js';
 import 'videojs-youtube';
 import { YoutubeSearchContext } from '../../contexts/YoutubeSearchContext';
@@ -12,7 +11,8 @@ import Loading from './Loading';
 
 const Home = () => {
   const [showSidebar, setShowSidebar] = useState(false);
-  const [videoId, setVideoId] = useState(null);
+  const [videoId, setVideoId] = useState('');
+  const [currentUser, setCurrentUser] = useState(null);
 
   const {
     guitarVideos,
@@ -25,13 +25,13 @@ const Home = () => {
 
   // let navigate = useNavigate();
 
-  // useEffect(() => {
-  //   const userInfo = localStorage.getItem('userInfo');
-
-  //   if (userInfo) {
-  //     navigate('/');
-  //   }
-  // }, []);
+  // TODO: Move this plus useState to app.js
+  useEffect(() => {
+    const user = localStorage.getItem('userInfo');
+    if (user) {
+      setCurrentUser(user);
+    }
+  }, []);
 
   const youtubeBaseUrl = 'http://www.youtube.com/watch?v=';
   const player = videojs.getPlayer('vid1');
@@ -57,9 +57,14 @@ const Home = () => {
       type: 'video/youtube',
       src: `${youtubeBaseUrl}${videoId}`,
     });
-    // Check if playing...;
     player.play();
   };
+
+  useEffect(() => {
+    if (videoId) {
+      handlePlayVideo();
+    }
+  }, [videoId]);
 
   if (
     !guitarVideos ||
@@ -68,7 +73,7 @@ const Home = () => {
     !violinVideos ||
     !saxophoneVideos
   ) {
-    return <div></div>;
+    return <Loading />;
   }
 
   return (
@@ -83,7 +88,11 @@ const Home = () => {
               setShowSidebar={setShowSidebar}
             />
           )}
-          <NavBar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+          <NavBar
+            currentUser={currentUser}
+            showSidebar={showSidebar}
+            setShowSidebar={setShowSidebar}
+          />
           <main>
             <VideoPlayerSection>
               <HeaderOne></HeaderOne>
@@ -106,7 +115,7 @@ const Home = () => {
                       <ImgThumbnail
                         onClick={() => {
                           setVideoId(video.id.videoId);
-                          handlePlayVideo();
+                          // handlePlayVideo();
                         }}
                         src={video.snippet.thumbnails.high.url}
                         alt=""

@@ -14,6 +14,7 @@ const SubmitButtonWrapper = styled.div`
   margin-top: 2.5rem;
 `;
 const SubmitButton = styled.button`
+  border: none;
   width: 100%;
   padding: 0.75rem 0;
   background-color: #f40058cc;
@@ -22,9 +23,10 @@ const SubmitButton = styled.button`
   margin-bottom: 1.5rem;
   border-radius: 0.25rem;
   transition: all 0.15s ease-in-out;
+  cursor: pointer;
 
   &:hover {
-    background-color: #f40058dd;
+    background-color: #f40058ee;
   }
   &:focus {
     outline: none;

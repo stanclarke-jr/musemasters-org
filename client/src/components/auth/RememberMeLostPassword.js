@@ -44,6 +44,7 @@ const RememberMeLabel = styled.label`
   font-weight: 500;
 `;
 const Link = styled.a`
+  text-decoration: none;
   font-size: 0.875rem;
   color: rgb(29 78 216);
 

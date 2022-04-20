@@ -18,6 +18,7 @@ const LinkWrapper = styled.div`
   font-weight: 500;
 `;
 const StyledLink = styled(Link)`
+  text-decoration: none;
   font-size: 0.875rem;
   color: rgb(29 78 216);
 

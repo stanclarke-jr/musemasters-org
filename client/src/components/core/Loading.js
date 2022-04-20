@@ -17,11 +17,10 @@ const Spinner = keyframes`
   }
 `;
 const Wrapper = styled.div`
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
 `;
 const LoadingSpinner = styled.div`
   width: 5rem;

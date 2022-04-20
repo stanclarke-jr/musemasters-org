@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import axios from 'axios';
 import styled from 'styled-components';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import FormContainer from './FormContainer';
 import CloseFormButton from './CloseFormButton';
 import FormHeader from './FormHeader';
@@ -16,6 +17,8 @@ const LogInPage = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,6 +39,7 @@ const LogInPage = () => {
       setEmail('');
       setPassword('');
       setError('');
+      navigate('/');
     } catch (error) {
       setError(error.response.data.message);
       setIsLoading(false);
