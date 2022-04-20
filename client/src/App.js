@@ -5,6 +5,7 @@ import LogInPage from './components/auth/LogInPage';
 import CreateAcctPage from './components/auth/CreateAcctPage';
 
 function App() {
+  // TODO: create a guarded route for log in and create account pages
   return (
     <BrowserRouter>
       <GlobalStyles />
@@ -12,6 +13,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="login" element={<LogInPage />} />
         <Route path="create-account" element={<CreateAcctPage />} />
+        {/* <Route path="profile" elment={<ProfilePage />} /> */}
       </Routes>
     </BrowserRouter>
   );

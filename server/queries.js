@@ -4,17 +4,17 @@ const queries = {
   allPianoVideos:
     'piano lessons (beginner | intermediate | advanced | jazz | blues)',
   allDrumVideos:
-    'drum lessons (beginner | intermediate | advanced jazz | blues)',
+    'drum lessons (beginner | intermediate | advanced | jazz | blues)',
   allViolinVideos:
-    'violin lessons (beginner | intermediate | advanced jazz | blues)',
+    'violin lessons (beginner | intermediate | advanced | jazz | blues)',
   allSaxophoneVideos:
-    'saxophone lessons (beginner | intermediate | advanced jazz | blues)',
+    'saxophone lessons (beginner | intermediate | advanced | jazz | blues)',
   allHarmonicaVideos:
-    'harmonica lessons (beginner | intermediate | advanced jazz | blues)',
+    'harmonica lessons (beginner | intermediate | advanced | jazz | blues)',
   allBassVideos:
-    'bass lessons (beginner | intermediate | advanced jazz | blues)',
+    'bass lessons (beginner | intermediate | advanced | jazz | blues)',
   allMidiVideos:
-    'midi lessons (beginnner | intermediate | advanced jazz | blues)',
+    'midi lessons (beginnner | intermediate | advanced | jazz | blues)',
 };
 
 module.exports = queries;
