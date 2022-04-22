@@ -50,9 +50,7 @@ const LogInPage = () => {
     <FormContainer>
       <CloseFormButton />
       <FormHeader>Log in to MuseMasters</FormHeader>
-      {error && <ErrorMsg>{error}</ErrorMsg>}
-      {isLoading && <Loading />}
-      <Form method="post" onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <>
           <Label htmlFor="email">Your email</Label>
           <Input
@@ -78,6 +76,8 @@ const LogInPage = () => {
           />
         </>
         <RememberMeLostPassword />
+        {error && <ErrorMsg>{error}</ErrorMsg>}
+        {isLoading && <Loading />}
         <SubmitFormButton>Log in to your account</SubmitFormButton>
         <FormLink
           to="/create-account"

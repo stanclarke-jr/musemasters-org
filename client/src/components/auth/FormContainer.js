@@ -9,7 +9,7 @@ const FormContainer = ({ children }) => {
 };
 
 const Wrapper = styled.div`
-  height: fit-content;
+  height: 100vh;
   background-color: rgb(24 24 27);
   padding: 0.5rem;
 `;

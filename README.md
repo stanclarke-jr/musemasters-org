@@ -1,4 +1,4 @@
-# MuseMasters - WIP
+# MuseMasters
 
 YouTube is a rabbithole of videos. Learning to play an instrument using YouTube’s videos can be overwhelming.
 
