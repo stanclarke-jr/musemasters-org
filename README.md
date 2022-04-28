@@ -26,7 +26,7 @@ Distracting, unrelated videos are right around the corner. MuseMasters curates m
 
 ### The Details
 
-Users are able to watch videos without the need to log in. In the future they will be able to like videos, comment on them, submit suggestions, as well as view their saved videos. However, to do so they *will* need to be logged in. User authentication was done using JSON Web Tokens (JWT), and bcryptjs to encrypt passwords. All data is stored in MongoDB. Images are stored on Cloudinary.
+Users are able to watch videos without the need to log in. In the future they will be able to like videos, comment on them, submit suggestions, as well as view their saved videos. However, to do so they *will* need to be logged in. User authentication was done using JSON Web Tokens (JWT), and bcrypt.js to encrypt passwords. All data is stored in MongoDB. Images are stored on Cloudinary.
 
 ### Built With
 
@@ -37,7 +37,7 @@ Users are able to watch videos without the need to log in. In the future they wi
 - [Mongoose](https://mongoosejs.com)
 - [Video.js](https://video.js.com)
 - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken#readme)
-- [bcrypt.js]([htts](https://github.com/dcodeIO/bcrypt.js#readme))
+- [bcrypt.js](https://github.com/dcodeIO/bcrypt.js#readme))
 - [Axios](https://axios-http.com)
 - [YouTube Data API v3](https://developers.google.com/youtube/v3/docs/)
 - [Google APIs Node.js Client](https://github.com/googleapis/google-api-nodejs-client#readme)
@@ -52,8 +52,9 @@ Users are able to watch videos without the need to log in. In the future they wi
 ## Demo
 
 <br>
-<div align='center'>
-  <img src='demo/01_musemasters-demo.gif' alt='MuseMasters demo' style='border: none'>
+<div align='center' width='100%'>
+  <img src='demo/01_musemasters-demo.gif' alt='MuseMasters demo' style='box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); border-radius: 0.5rem'>
 </div>
 <br>
 
