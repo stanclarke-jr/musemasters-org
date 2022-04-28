@@ -6,6 +6,13 @@
 
 <br>
 <br>
+<div align='center' width='100%'>
+  <img src='demo/01_musemasters-demo.gif' alt='MuseMasters demo' style='box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); border-radius: 0.5rem'>
+</div>
+
+<br>
+<br>
 <details>
   <summary>Table of Contents</summary>
 
@@ -13,7 +20,6 @@
     - [The Details](#the-details)
     - [Built With](#built-with)
   - [Getting Started](#getting-started)
-  - [Demo](#demo)
   - [Future Home of MuseMasters](#future-home-of-musemasters)
   - [Contact](#contact)
 </details>
@@ -48,15 +54,6 @@ Users are able to watch videos without the need to log in. In the future they wi
 1. `yarn install` or `npm install` from client _and_ server folders to install dependencies
 2. `yarn start:client` from client folder to start frontend dev environment
 3. `yarn start:server` from server folder to start backend dev environment
-
-## Demo
-
-<br>
-<div align='center' width='100%'>
-  <img src='demo/01_musemasters-demo.gif' alt='MuseMasters demo' style='box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05); border-radius: 0.5rem'>
-</div>
-<br>
 
 ## Future Home of MuseMasters
 
