@@ -26,7 +26,7 @@
 
 ## Overview
 
-YouTube is a rabbithole of videos. Learning to play an instrument using YouTube’s videos can be overwhelming.
+YouTube is a rabbithole of videos. Learning to play an instrument on YouTube can be overwhelming.
 
 Distracting, unrelated videos are right around the corner. MuseMasters curates music lesson videos based on custom search queries. Music lessons in one place, on a separate community-oriented platform to facilitate learning.
 
