@@ -55,10 +55,6 @@ Users are able to watch videos without the need to log in. In the future they wi
 2. `yarn start:client` from client folder to start frontend dev environment
 3. `yarn start:server` from server folder to start backend dev environment
 
-## Future Home of MuseMasters
-
-[musemasters.org](https://musemasters.org)
-
 ## Contact
 
 [Stan Clarke, Jr.](https://github.com/stanclarke-jr) - stan@stanclarkejr.ca
