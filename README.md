@@ -57,7 +57,7 @@ Users are able to watch videos without the need to log in. In the future they wi
 
 ## Contact
 
-[Stan Clarke, Jr.](https://github.com/stanclarke-jr) - stan@stanclarkejr.ca
+[Stan Clarke, Jr.](https://github.com/stanclarke-jr)
 
 
 
